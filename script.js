@@ -45,7 +45,7 @@ function start() {
  */
 
 async function loadStudents() {
-    const response = await fetch('http://petlatkea.dk/2021/hogwarts/students.json');
+    const response = await fetch('https://petlatkea.dk/2021/hogwarts/students.json');
     const data = await response.json();
     getStudentsData(data);
 }
