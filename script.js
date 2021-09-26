@@ -556,7 +556,8 @@ function handlePrefect(checkbox, i) {
     if (checkbox.checked === true) {
         const housePrefects = getNumPrefectsHouse().housePrefects;
         const numPrefects = getNumPrefectsHouse().numPrefects;
-        if (numPrefects.g === 2 || numPrefects.h === 2 || numPrefects.s === 2 || numPrefects.r === 2) {
+        if ((numPrefects.g === 2 && studentsDisplay[i].house === "Gryffindor") || (numPrefects.h === 2  && studentsDisplay[i].house === "Hufflepuff") || 
+        (numPrefects.s === 2  && studentsDisplay[i].house === "Slytherin") || (numPrefects.r === 2  && studentsDisplay[i].house === "Ravenclaw")) {
             document.getElementById("alertText").innerHTML = "THERE ARE ALREADY </br> 2 PREFECTS </br> IN THIS HOUSE";
             alert.style.display = "block";
             checkbox.checked = false;
